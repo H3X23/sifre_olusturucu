@@ -13,7 +13,7 @@ sifre = f"{sayi1}{harf1}{sayi2}{harf2}"
 
 print("İşte şifren:")
 print(sifre)
-dosya_ismi =int(input("şifrenin kaydedileceği dosya ismi (sonuna .txt yaz) : "))
+dosya_ismi =input("şifrenin kaydedileceği dosya ismi (sonuna .txt yaz) : ")
 # Şifreyi bir dosyaya kaydetme
 with open("dosya_ismi", "a", encoding="utf-8") as dosya:
     dosya.write(f"Yeni Şifre: {sifre}\n")
