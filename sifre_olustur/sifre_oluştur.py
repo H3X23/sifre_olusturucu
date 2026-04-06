@@ -9,8 +9,14 @@ sayi2 = random.randint(1, 100)
 harf1 = "".join(random.choice(string.ascii_letters) for _ in range(8))
 harf2 = "".join(random.choice(string.ascii_letters) for _ in range(8))
 
-#Sembol üretme
-sembol1 = "".join(random.choice(string.punctuation) for _ in range(2))
-sembol2 = "".join(random.choice(string.punctuation) for _ in range(2))
+sifre = f"{sayi1}{harf1}{sayi2}{harf2}"
+
 print("İşte şifren:")
-print(f"{sayi1}{harf1}{sembol1}{sayi2}{sembol2}{harf2}")
+print(sifre)
+dosya_ismi =int(input("şifrenin kaydedileceği dosya ismi (sonuna .txt yaz) : "))
+# Şifreyi bir dosyaya kaydetme
+with open("dosya_ismi", "a", encoding="utf-8") as dosya:
+    dosya.write(f"Yeni Şifre: {sifre}\n")
+
+print("\nŞifre başarıyla kaydedildi!")
+
